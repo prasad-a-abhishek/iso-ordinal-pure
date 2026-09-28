@@ -1,0 +1,48 @@
+INFO: Using built-in libfuzzer
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1308074783
+INFO:        9 files found in corpus_cli_safe
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 9 min: 4b max: 14b total: 74b rss: 42Mb
+#10	INITED cov: 26 ft: 26 corp: 4/28b exec/s: 0 rss: 42Mb
+#19	REDUCE cov: 26 ft: 26 corp: 4/27b lim: 8 exec/s: 0 rss: 42Mb L: 7/8 MS: 4 ShuffleBytes-ChangeBit-ChangeBit-EraseBytes-
+#23	REDUCE cov: 26 ft: 26 corp: 4/25b lim: 8 exec/s: 0 rss: 42Mb L: 6/8 MS: 4 ChangeASCIIInt-ChangeBinInt-ChangeBinInt-EraseBytes-
+#24	REDUCE cov: 26 ft: 26 corp: 4/22b lim: 8 exec/s: 0 rss: 42Mb L: 5/7 MS: 1 EraseBytes-
+#43	REDUCE cov: 27 ft: 27 corp: 5/30b lim: 8 exec/s: 0 rss: 42Mb L: 8/8 MS: 4 ChangeByte-CopyPart-ChangeBit-ChangeBit-
+#49	NEW    cov: 31 ft: 31 corp: 6/34b lim: 8 exec/s: 0 rss: 42Mb L: 4/8 MS: 1 ChangeASCIIInt-
+#51	REDUCE cov: 31 ft: 31 corp: 6/31b lim: 8 exec/s: 0 rss: 42Mb L: 4/8 MS: 2 ChangeByte-EraseBytes-
+#105	NEW    cov: 35 ft: 35 corp: 7/35b lim: 8 exec/s: 105 rss: 42Mb L: 4/8 MS: 5 InsertRepeatedBytes-ChangeASCIIInt-InsertByte-CrossOver-CMP- DE: "\000\000"-
+#116	REDUCE cov: 35 ft: 35 corp: 7/33b lim: 8 exec/s: 58 rss: 42Mb L: 2/8 MS: 1 EraseBytes-
+#128	pulse  cov: 35 ft: 35 corp: 7/33b lim: 8 exec/s: 64 rss: 42Mb
+#135	REDUCE cov: 35 ft: 35 corp: 7/32b lim: 8 exec/s: 67 rss: 42Mb L: 5/8 MS: 4 InsertByte-ChangeBit-CopyPart-EraseBytes-
+#150	REDUCE cov: 35 ft: 35 corp: 7/31b lim: 8 exec/s: 75 rss: 42Mb L: 3/8 MS: 3 InsertByte-InsertByte-EraseBytes-
+#151	REDUCE cov: 35 ft: 35 corp: 7/29b lim: 8 exec/s: 75 rss: 42Mb L: 3/8 MS: 1 EraseBytes-
+#153	REDUCE cov: 35 ft: 35 corp: 7/27b lim: 8 exec/s: 76 rss: 42Mb L: 3/8 MS: 2 InsertByte-EraseBytes-
+#170	REDUCE cov: 35 ft: 35 corp: 7/26b lim: 8 exec/s: 85 rss: 42Mb L: 1/8 MS: 2 ChangeBit-EraseBytes-
+#202	REDUCE cov: 35 ft: 35 corp: 7/25b lim: 8 exec/s: 67 rss: 42Mb L: 2/8 MS: 2 CopyPart-EraseBytes-
+#256	pulse  cov: 35 ft: 35 corp: 7/25b lim: 8 exec/s: 64 rss: 42Mb
+#259	REDUCE cov: 35 ft: 35 corp: 7/24b lim: 8 exec/s: 64 rss: 42Mb L: 7/7 MS: 2 ChangeASCIIInt-EraseBytes-
+#283	REDUCE cov: 35 ft: 35 corp: 7/23b lim: 8 exec/s: 70 rss: 42Mb L: 3/7 MS: 2 ShuffleBytes-EraseBytes-
+#285	REDUCE cov: 35 ft: 35 corp: 7/20b lim: 8 exec/s: 71 rss: 42Mb L: 4/4 MS: 2 ChangeByte-EraseBytes-
+#298	REDUCE cov: 35 ft: 35 corp: 7/19b lim: 8 exec/s: 74 rss: 42Mb L: 2/4 MS: 3 ChangeBinInt-EraseBytes-ChangeBinInt-
+#377	REDUCE cov: 35 ft: 35 corp: 7/16b lim: 8 exec/s: 62 rss: 42Mb L: 1/4 MS: 4 ChangeBit-ChangeByte-CrossOver-ChangeByte-
+#398	REDUCE cov: 35 ft: 35 corp: 7/15b lim: 8 exec/s: 66 rss: 42Mb L: 3/3 MS: 1 EraseBytes-
+#463	REDUCE cov: 35 ft: 35 corp: 7/14b lim: 8 exec/s: 66 rss: 42Mb L: 2/3 MS: 5 ShuffleBytes-ShuffleBytes-ShuffleBytes-EraseBytes-CopyPart-
+#506	REDUCE cov: 35 ft: 35 corp: 7/13b lim: 8 exec/s: 63 rss: 42Mb L: 1/3 MS: 3 ChangeBinInt-CrossOver-EraseBytes-
+#512	pulse  cov: 35 ft: 35 corp: 7/13b lim: 8 exec/s: 64 rss: 42Mb
+#633	REDUCE cov: 35 ft: 35 corp: 7/12b lim: 8 exec/s: 63 rss: 42Mb L: 1/3 MS: 2 EraseBytes-ChangeByte-
+#759	REDUCE cov: 35 ft: 35 corp: 7/11b lim: 8 exec/s: 63 rss: 42Mb L: 2/3 MS: 1 EraseBytes-
+#1024	pulse  cov: 35 ft: 35 corp: 7/11b lim: 8 exec/s: 64 rss: 42Mb
+#1056	REDUCE cov: 35 ft: 35 corp: 7/10b lim: 8 exec/s: 66 rss: 42Mb L: 1/3 MS: 2 CopyPart-EraseBytes-
+#1119	REDUCE cov: 35 ft: 35 corp: 7/9b lim: 8 exec/s: 65 rss: 42Mb L: 1/3 MS: 3 ChangeBit-ChangeByte-EraseBytes-
+#2048	pulse  cov: 35 ft: 35 corp: 7/9b lim: 17 exec/s: 64 rss: 42Mb
+==61712== ERROR: libFuzzer: fuzz target exited
+SUMMARY: libFuzzer: fuzz target exited
+MS: 5 PersAutoDict-ChangeByte-PersAutoDict-CrossOver-ChangeBit- DE: "\000\000"-"\000\000"-; base unit: c4ea21bb365bbeeaf5f2c654883e56d11e43c44e
+0x2,0x20,0x0,0x35,
+\002 \0005
+artifact_prefix='.artifacts_cli/'; Test unit written to .artifacts_cli/crash-2d3118546140fbab4a780fc90283e49fe7b0b171
+Base64: AiAANQ==

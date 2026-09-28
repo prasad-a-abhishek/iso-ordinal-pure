@@ -1,0 +1,92 @@
+{
+  "cycle": "137",
+  "phase": "T3 CORPUS_RUN",
+  "surfaces": [
+    {
+      "surface": "parse",
+      "harness": "harness_parse.py",
+      "duration_seconds": 2,
+      "rc": 0,
+      "crashes": 0,
+      "hangs": 0,
+      "oom": 0,
+      "iters": 1000000,
+      "coverage": 54,
+      "feature_count": 85,
+      "stdout_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/parse_stdout.log",
+      "stderr_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/parse_stderr.log",
+      "wall_timeout": 120,
+      "seed_corpus": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_parse"
+    },
+    {
+      "surface": "format",
+      "harness": "harness_format.py",
+      "duration_seconds": 5,
+      "rc": 0,
+      "crashes": 0,
+      "hangs": 0,
+      "oom": 0,
+      "iters": 1000000,
+      "coverage": 57,
+      "feature_count": 71,
+      "stdout_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/format_stdout.log",
+      "stderr_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/format_stderr.log",
+      "wall_timeout": 120,
+      "seed_corpus": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_format"
+    },
+    {
+      "surface": "cli",
+      "harness": "harness_cli.py",
+      "duration_seconds": 5,
+      "rc": 77,
+      "crashes": 1,
+      "hangs": 0,
+      "oom": 0,
+      "iters": 2048,
+      "coverage": 35,
+      "feature_count": 35,
+      "stdout_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/cli_rerun_stdout.log",
+      "stderr_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/cli_rerun_stderr.log",
+      "wall_timeout": 60,
+      "seed_corpus": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_cli_safe",
+      "note": "Atheris halted at iter 2048 due to harness-assertion crash (CLI mode==5 + whitespace-containing argv), documented as CLI-A1 finding. CLI was re-run with corpus_cli_safe (curated subset) to obtain meaningful coverage stats (cov=35, ft=35) before the inevitable crash. Original first-run crash preserved in crashes/cli_first_run/.",
+      "first_run_crash": {
+        "seed": "malformed_16_len10 (; rm -rf /)",
+        "artifact": "crashes/cli_first_run/crash-2228a84955d91f00a4cf9e1d9503411e8b3343a6"
+      },
+      "rerun_crash": {
+        "seed": "\\x02 \\x005 (replayed into mode==5 + '--definitely-not-a-real-flag- ')",
+        "artifact": "crashes/cli/crash-2d3118546140fbab4a780fc90283e49fe7b0b171"
+      }
+    },
+    {
+      "surface": "dates",
+      "harness": "harness_dates.py",
+      "duration_seconds": 6,
+      "rc": 0,
+      "crashes": 0,
+      "hangs": 0,
+      "oom": 0,
+      "iters": 1000000,
+      "coverage": 59,
+      "feature_count": 77,
+      "stdout_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/dates_stdout.log",
+      "stderr_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/dates_stderr.log",
+      "wall_timeout": 120,
+      "seed_corpus": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_dates"
+    }
+  ],
+  "total_iters": 3002048,
+  "total_crashes": 1,
+  "total_hangs": 0,
+  "total_oom": 0,
+  "total_oracle_mismatches": 1,
+  "surfaces_covered": [
+    "parse",
+    "format",
+    "cli",
+    "dates"
+  ],
+  "duration_seconds": 18,
+  "oracle_mismatch_note": "CLI surface: harness assertion (harness_cli.py line 135) expected rc=2 for mode==5 (unknown flag), but the CLI returned rc=1 because argparse accepts '--something ' with embedded whitespace as a positional argument (standard argparse behavior). Documented as finding CLI-A1 (Info severity) \u2014 not a library bug."
+}

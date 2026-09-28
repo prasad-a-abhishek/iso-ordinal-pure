@@ -1,0 +1,25 @@
+INFO: Instrumenting iso_ordinal_parse
+INFO: Instrumenting iso_ordinal_parse._iso_ordinal_parse
+INFO: Instrumenting datetime
+INFO: Using built-in libfuzzer
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3651750867
+INFO:       30 files found in /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_format
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 30 min: 2b max: 15b total: 228b rss: 42Mb
+#31	INITED cov: 56 ft: 67 corp: 4/13b exec/s: 0 rss: 42Mb
+#36	REDUCE cov: 56 ft: 67 corp: 4/12b lim: 4 exec/s: 0 rss: 42Mb L: 3/4 MS: 5 ChangeBit-CopyPart-EraseBytes-ChangeBit-ChangeByte-
+#39	REDUCE cov: 56 ft: 67 corp: 4/11b lim: 4 exec/s: 0 rss: 42Mb L: 1/4 MS: 3 ShuffleBytes-ChangeByte-EraseBytes-
+#46	NEW    cov: 56 ft: 69 corp: 5/15b lim: 4 exec/s: 0 rss: 42Mb L: 4/4 MS: 2 ChangeBit-ChangeBinInt-
+#145	REDUCE cov: 56 ft: 69 corp: 5/14b lim: 4 exec/s: 0 rss: 42Mb L: 3/4 MS: 4 ShuffleBytes-ChangeASCIIInt-CopyPart-EraseBytes-
+#185	NEW    cov: 57 ft: 70 corp: 6/18b lim: 4 exec/s: 0 rss: 42Mb L: 4/4 MS: 5 ShuffleBytes-ChangeASCIIInt-ChangeASCIIInt-ChangeASCIIInt-ChangeBit-
+#243	NEW    cov: 57 ft: 71 corp: 7/22b lim: 4 exec/s: 0 rss: 42Mb L: 4/4 MS: 3 ChangeBit-CopyPart-ChangeByte-
+#348	REDUCE cov: 57 ft: 71 corp: 7/19b lim: 4 exec/s: 0 rss: 42Mb L: 1/4 MS: 5 ChangeByte-CMP-CopyPart-EraseBytes-EraseBytes- DE: "\377\377\377\377"-
+#553	REDUCE cov: 57 ft: 71 corp: 7/17b lim: 4 exec/s: 0 rss: 42Mb L: 2/4 MS: 5 ChangeBinInt-EraseBytes-ChangeBit-EraseBytes-ChangeByte-
+#1524	REDUCE cov: 57 ft: 71 corp: 7/16b lim: 11 exec/s: 0 rss: 42Mb L: 3/3 MS: 1 EraseBytes-
+#30154	REDUCE cov: 57 ft: 71 corp: 7/15b lim: 293 exec/s: 0 rss: 42Mb L: 1/3 MS: 5 ChangeByte-EraseBytes-ChangeBit-ChangeBit-ChangeBit-
+#524288	pulse  cov: 57 ft: 71 corp: 7/15b lim: 4096 exec/s: 262144 rss: 42Mb
+Done 1000000 in 5 second(s)

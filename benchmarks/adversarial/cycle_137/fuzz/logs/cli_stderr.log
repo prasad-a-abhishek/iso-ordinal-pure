@@ -1,0 +1,16 @@
+INFO: Using built-in libfuzzer
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 271896348
+INFO:       30 files found in /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_cli
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 30 min: 2b max: 15b total: 228b rss: 42Mb
+==61427== ERROR: libFuzzer: fuzz target exited
+SUMMARY: libFuzzer: fuzz target exited
+MS: 0 ; base unit: 0000000000000000000000000000000000000000
+0x3b,0x20,0x72,0x6d,0x20,0x2d,0x72,0x66,0x20,0x2f,
+; rm -rf /
+artifact_prefix='/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/.artifacts_cli/'; Test unit written to /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/.artifacts_cli/crash-2228a84955d91f00a4cf9e1d9503411e8b3343a6
+Base64: OyBybSAtcmYgLw==

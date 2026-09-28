@@ -1,0 +1,29 @@
+INFO: Instrumenting iso_ordinal_parse
+INFO: Instrumenting iso_ordinal_parse._iso_ordinal_parse
+INFO: Using built-in libfuzzer
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 901298855
+INFO:       30 files found in /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_dates
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 30 min: 2b max: 15b total: 228b rss: 41Mb
+#31	INITED cov: 53 ft: 68 corp: 5/18b exec/s: 0 rss: 41Mb
+#32	REDUCE cov: 53 ft: 68 corp: 5/17b lim: 5 exec/s: 0 rss: 41Mb L: 1/5 MS: 1 EraseBytes-
+#40	NEW    cov: 53 ft: 69 corp: 6/20b lim: 5 exec/s: 0 rss: 41Mb L: 3/5 MS: 3 ChangeBit-ShuffleBytes-EraseBytes-
+#56	REDUCE cov: 53 ft: 70 corp: 7/22b lim: 5 exec/s: 0 rss: 41Mb L: 2/5 MS: 1 InsertByte-
+#117	NEW    cov: 54 ft: 71 corp: 8/26b lim: 5 exec/s: 0 rss: 41Mb L: 4/5 MS: 1 CrossOver-
+#192	REDUCE cov: 54 ft: 71 corp: 8/25b lim: 5 exec/s: 0 rss: 41Mb L: 1/5 MS: 5 EraseBytes-ChangeByte-ShuffleBytes-InsertRepeatedBytes-CrossOver-
+#356	NEW    cov: 55 ft: 72 corp: 9/27b lim: 5 exec/s: 0 rss: 41Mb L: 2/5 MS: 4 ChangeBinInt-ChangeBinInt-ChangeBit-CrossOver-
+#427	NEW    cov: 57 ft: 75 corp: 10/31b lim: 5 exec/s: 0 rss: 41Mb L: 4/5 MS: 1 CrossOver-
+#792	REDUCE cov: 57 ft: 75 corp: 10/30b lim: 7 exec/s: 0 rss: 41Mb L: 4/4 MS: 5 ShuffleBytes-ChangeBinInt-InsertByte-ChangeBit-EraseBytes-
+#854	REDUCE cov: 57 ft: 75 corp: 10/29b lim: 7 exec/s: 0 rss: 41Mb L: 3/4 MS: 2 EraseBytes-InsertByte-
+#1030	REDUCE cov: 59 ft: 77 corp: 11/33b lim: 7 exec/s: 0 rss: 41Mb L: 4/4 MS: 1 ChangeBit-
+#2392	REDUCE cov: 59 ft: 77 corp: 11/32b lim: 18 exec/s: 0 rss: 41Mb L: 3/4 MS: 2 CopyPart-EraseBytes-
+#5302	REDUCE cov: 59 ft: 77 corp: 11/31b lim: 44 exec/s: 0 rss: 41Mb L: 3/4 MS: 5 CrossOver-ChangeByte-EraseBytes-CrossOver-EraseBytes-
+#16025	REDUCE cov: 59 ft: 77 corp: 11/30b lim: 144 exec/s: 0 rss: 41Mb L: 1/4 MS: 3 EraseBytes-CopyPart-ChangeBit-
+#22340	REDUCE cov: 59 ft: 77 corp: 11/29b lim: 200 exec/s: 0 rss: 41Mb L: 3/4 MS: 5 ChangeByte-CopyPart-ShuffleBytes-ChangeBit-EraseBytes-
+#43588	REDUCE cov: 59 ft: 77 corp: 11/28b lim: 408 exec/s: 0 rss: 41Mb L: 3/4 MS: 3 CrossOver-CopyPart-EraseBytes-
+#524288	pulse  cov: 59 ft: 77 corp: 11/28b lim: 4096 exec/s: 262144 rss: 41Mb
+Done 1000000 in 6 second(s)

@@ -1,0 +1,36 @@
+INFO: Instrumenting iso_ordinal_parse
+INFO: Instrumenting iso_ordinal_parse._iso_ordinal_parse
+INFO: Instrumenting datetime
+INFO: Using built-in libfuzzer
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1428670355
+INFO:       30 files found in /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_parse
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 30 min: 2b max: 15b total: 228b rss: 42Mb
+#31	INITED cov: 24 ft: 24 corp: 7/48b exec/s: 0 rss: 42Mb
+#43	NEW    cov: 25 ft: 27 corp: 8/58b lim: 10 exec/s: 0 rss: 43Mb L: 10/10 MS: 2 InsertByte-InsertByte-
+#53	REDUCE cov: 25 ft: 27 corp: 8/54b lim: 10 exec/s: 0 rss: 43Mb L: 4/10 MS: 5 CrossOver-ChangeASCIIInt-CrossOver-EraseBytes-EraseBytes-
+#61	REDUCE cov: 25 ft: 27 corp: 8/52b lim: 10 exec/s: 0 rss: 43Mb L: 8/10 MS: 3 CrossOver-CopyPart-EraseBytes-
+#157	NEW    cov: 50 ft: 62 corp: 9/62b lim: 10 exec/s: 0 rss: 43Mb L: 10/10 MS: 1 CrossOver-
+#170	REDUCE cov: 50 ft: 62 corp: 9/61b lim: 10 exec/s: 0 rss: 43Mb L: 7/10 MS: 3 ShuffleBytes-ShuffleBytes-EraseBytes-
+#178	REDUCE cov: 50 ft: 62 corp: 9/59b lim: 10 exec/s: 0 rss: 43Mb L: 6/10 MS: 3 ChangeByte-ChangeBinInt-EraseBytes-
+#184	NEW    cov: 53 ft: 80 corp: 10/69b lim: 10 exec/s: 0 rss: 43Mb L: 10/10 MS: 1 CrossOver-
+#270	REDUCE cov: 53 ft: 80 corp: 10/68b lim: 10 exec/s: 0 rss: 43Mb L: 1/10 MS: 1 EraseBytes-
+#446	REDUCE cov: 53 ft: 80 corp: 10/66b lim: 10 exec/s: 0 rss: 43Mb L: 6/10 MS: 1 CrossOver-
+#517	NEW    cov: 53 ft: 81 corp: 11/76b lim: 10 exec/s: 0 rss: 43Mb L: 10/10 MS: 1 CrossOver-
+#543	NEW    cov: 53 ft: 83 corp: 12/86b lim: 10 exec/s: 0 rss: 43Mb L: 10/10 MS: 1 CopyPart-
+#720	REDUCE cov: 53 ft: 83 corp: 12/83b lim: 10 exec/s: 0 rss: 43Mb L: 3/10 MS: 2 EraseBytes-ChangeASCIIInt-
+#846	REDUCE cov: 53 ft: 83 corp: 12/82b lim: 10 exec/s: 0 rss: 43Mb L: 2/10 MS: 1 EraseBytes-
+#929	REDUCE cov: 53 ft: 83 corp: 12/80b lim: 10 exec/s: 0 rss: 43Mb L: 2/10 MS: 3 EraseBytes-ChangeASCIIInt-ChangeByte-
+#975	REDUCE cov: 53 ft: 83 corp: 12/78b lim: 10 exec/s: 0 rss: 43Mb L: 4/10 MS: 1 EraseBytes-
+#1028	REDUCE cov: 53 ft: 83 corp: 12/76b lim: 10 exec/s: 0 rss: 43Mb L: 7/10 MS: 3 ChangeBinInt-ChangeByte-CrossOver-
+#1064	REDUCE cov: 53 ft: 83 corp: 12/75b lim: 10 exec/s: 0 rss: 43Mb L: 1/10 MS: 1 EraseBytes-
+#1193	REDUCE cov: 53 ft: 83 corp: 12/74b lim: 10 exec/s: 0 rss: 43Mb L: 6/10 MS: 4 CopyPart-InsertByte-InsertByte-EraseBytes-
+#1441	REDUCE cov: 53 ft: 83 corp: 12/73b lim: 10 exec/s: 0 rss: 43Mb L: 1/10 MS: 3 CrossOver-ChangeBit-EraseBytes-
+#2089	REDUCE cov: 53 ft: 83 corp: 12/72b lim: 16 exec/s: 0 rss: 43Mb L: 5/10 MS: 3 ShuffleBytes-ChangeBit-EraseBytes-
+#3790	REDUCE cov: 53 ft: 83 corp: 12/71b lim: 32 exec/s: 0 rss: 43Mb L: 4/10 MS: 1 EraseBytes-
+#7622	NEW    cov: 54 ft: 85 corp: 13/82b lim: 67 exec/s: 0 rss: 43Mb L: 11/11 MS: 2 ShuffleBytes-InsertByte-
+Done 1000000 in 2 second(s)

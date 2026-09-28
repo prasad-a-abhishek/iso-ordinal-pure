@@ -1,0 +1,25 @@
+{
+  "surface": "cli",
+  "harness": "harness_cli.py",
+  "duration_seconds": 5,
+  "rc": 77,
+  "crashes": 1,
+  "hangs": 0,
+  "oom": 0,
+  "iters": 2048,
+  "coverage": 35,
+  "feature_count": 35,
+  "stdout_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/cli_rerun_stdout.log",
+  "stderr_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/cli_rerun_stderr.log",
+  "wall_timeout": 60,
+  "seed_corpus": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_cli_safe",
+  "note": "Atheris halted at iter 2048 due to harness-assertion crash (CLI mode==5 + whitespace-containing argv), documented as CLI-A1 finding. CLI was re-run with corpus_cli_safe (curated subset) to obtain meaningful coverage stats (cov=35, ft=35) before the inevitable crash. Original first-run crash preserved in crashes/cli_first_run/.",
+  "first_run_crash": {
+    "seed": "malformed_16_len10 (; rm -rf /)",
+    "artifact": "crashes/cli_first_run/crash-2228a84955d91f00a4cf9e1d9503411e8b3343a6"
+  },
+  "rerun_crash": {
+    "seed": "\\x02 \\x005 (replayed into mode==5 + '--definitely-not-a-real-flag- ')",
+    "artifact": "crashes/cli/crash-2d3118546140fbab4a780fc90283e49fe7b0b171"
+  }
+}

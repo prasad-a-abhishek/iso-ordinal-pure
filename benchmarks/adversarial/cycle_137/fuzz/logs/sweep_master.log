@@ -1,0 +1,48 @@
+===================================================================
+cycle_137 T3 CORPUS_RUN
+  per-surface wall budget: 120s
+  PYTHONPATH:              /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/src
+  python:                  /usr/local/bin/python3 (Python 3.11.15)
+  atheris:                 installed
+===================================================================
+-------------------------------------------------------------------
+[run]  harness_parse.py (surface=parse, wall=120s)
+-------------------------------------------------------------------
+  rc=0  duration=2s
+  crashes=0 hangs=0 oom=0 cov=54 ft=85 execs=1000000
+  stats -> /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/stats/parse.json
+  log   -> /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/parse_stdout.log
+-------------------------------------------------------------------
+[run]  harness_format.py (surface=format, wall=120s)
+-------------------------------------------------------------------
+  rc=0  duration=5s
+  crashes=0 hangs=0 oom=0 cov=57 ft=71 execs=1000000
+  stats -> /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/stats/format.json
+  log   -> /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/format_stdout.log
+-------------------------------------------------------------------
+[run]  harness_cli.py (surface=cli, wall=120s)
+-------------------------------------------------------------------
+  rc=77  duration=0s
+  crashes=1 hangs=0 oom=0 cov=? ft=? execs=?
+  stats -> /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/stats/cli.json
+  log   -> /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/cli_stdout.log
+-------------------------------------------------------------------
+[run]  harness_dates.py (surface=dates, wall=120s)
+-------------------------------------------------------------------
+  rc=0  duration=6s
+  crashes=0 hangs=0 oom=0 cov=59 ft=77 execs=1000000
+  stats -> /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/stats/dates.json
+  log   -> /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/dates_stdout.log
+AGGREGATE_STATS.json written
+  total iters: 3000000
+  total crashes: 1
+  total hangs:   0
+  total oom:     0
+  surfaces:      ['parse', 'format', 'cli', 'dates']
+  duration:      13s
+===================================================================
+sweep complete
+  artifacts: /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/crashes  /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/hangs  /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/oom
+  logs:      /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs
+  stats:     /root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/stats
+===================================================================

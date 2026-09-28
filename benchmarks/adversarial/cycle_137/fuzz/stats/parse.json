@@ -1,0 +1,16 @@
+{
+  "surface": "parse",
+  "harness": "harness_parse.py",
+  "duration_seconds": 2,
+  "rc": 0,
+  "crashes": 0,
+  "hangs": 0,
+  "oom": 0,
+  "iters": 1000000,
+  "coverage": 54,
+  "feature_count": 85,
+  "stdout_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/parse_stdout.log",
+  "stderr_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/parse_stderr.log",
+  "wall_timeout": 120,
+  "seed_corpus": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_parse"
+}

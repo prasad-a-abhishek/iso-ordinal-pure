@@ -1,0 +1,16 @@
+{
+  "surface": "dates",
+  "harness": "harness_dates.py",
+  "duration_seconds": 6,
+  "rc": 0,
+  "crashes": 0,
+  "hangs": 0,
+  "oom": 0,
+  "iters": 1000000,
+  "coverage": 59,
+  "feature_count": 77,
+  "stdout_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/dates_stdout.log",
+  "stderr_log": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/logs/dates_stderr.log",
+  "wall_timeout": 120,
+  "seed_corpus": "/root/projects/iso-ordinal-pure/.worktrees/t_cycle137-adv-01/benchmarks/adversarial/cycle_137/fuzz/corpus_dates"
+}
