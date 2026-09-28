@@ -226,6 +226,42 @@ verified 2026-09-28). No cross-cycle contamination of findings.
 
 ---
 
+## Observations (not findings — not counted in the severity tally above)
+
+Two corrections/improvements were noticed during source review. Neither is
+exploitable nor rises to "finding" severity, but they are recorded here so
+that a future maintainer may address them:
+
+### OBS-1 — Docstring drift: `is_leap_year` / `days_in_year`
+
+**File:** `src/iso_ordinal_parse/_iso_ordinal_parse.py:103-105`, `:118`
+
+The docstring says `bool` is accepted (because `bool` is a subclass of
+`int`), but the implementation immediately below (lines 106, 120)
+**rejects** `bool` via an explicit `isinstance(year, bool)` fence. Both
+`is_leap_year(True)` and `days_in_year(True)` raise a clean `TypeError`
+in the live probe.
+
+**Why not a finding:** The *code* is correct — the bool-fence is a
+deliberate defensive choice (a footgun avoided). The drift is purely
+in the human-readable documentation. A future cycle may update the
+docstring to say "bool is rejected (despite being a subclass of int)".
+
+### OBS-2 — Console-script name vs argparse `prog`
+
+**Files:** `pyproject.toml [project.scripts]` declares the binary as
+`iso-ordinal-pure`; `src/iso_ordinal_parse/__main__.py:27,43` uses
+`_PROGRAM = "iso-ordinal-parse"` and `argparse.ArgumentParser(prog=...)`.
+
+After `pip install -e .`, `which iso-ordinal-pure` works but
+`iso-ordinal-pure --help` shows `usage: iso-ordinal-parse [-h] ...`.
+
+**Why not a finding:** Cosmetic UX confusion only. No security
+implication; no behavior change would prevent user code from working.
+A future cycle may align `_PROGRAM` with the pyproject script name.
+
+---
+
 ## Audit artifacts
 
 This audit produced 5 documents (all committed to
