@@ -1,0 +1,81 @@
+{
+  "repo": "iso-ordinal-pure",
+  "concept": "ISO 8601 ordinal date (YYYY-DDD) parser, serializer, and converter",
+  "keywords": ["iso-8601", "ordinal-date", "day-of-year", "YYYY-DDD", "iso-ordinal"],
+  "spec_path": "/root/projects/iso-ordinal-pure/SPEC.md",
+  "check_existing": {
+    "script": "/root/.hermes/repo_factory/scripts/check_existing.py",
+    "command": "python3 /root/.hermes/repo_factory/scripts/check_existing.py --name iso-ordinal-pure --concept 'iso-8601-ordinal-date' --keywords 'ordinal-date day-of-year YYYY-DDD'",
+    "stdout_excerpt": [
+      "============================================================",
+      "NOVELTY & NON-EXISTENCE AUDIT: iso-ordinal-pure (iso-8601-ordinal-date)",
+      "============================================================",
+      "1. Python Stdlib Check:   [PASS] No Python standard library collision.",
+      "2. Local Repo Check:       [PASS] No local project collision.",
+      "3. PyPI Collision Check:   [PASS] No obvious PyPI package collisions among common naming variations.",
+      "4. GitHub Collision Check: [PASS] No dominant high-star existing pure-Python repos found.",
+      "------------------------------------------------------------",
+      "FINAL VERDICT: APPROVED",
+      "============================================================"
+    ],
+    "verdict_last_line": "FINAL VERDICT: APPROVED",
+    "captured_at_utc": "2026-09-28T03:25:00Z",
+    "pre_scaffold_run": true
+  },
+  "primary_sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/ISO_8601",
+      "label": "Wikipedia — ISO 8601 (covers calendar / ordinal / week-date representations)",
+      "http_status": 200,
+      "curl_command": "curl -sIL -o /dev/null -w '%{http_code}' https://en.wikipedia.org/wiki/ISO_8601",
+      "captured_at_utc": "2026-09-28T03:24:00Z"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ordinal_date",
+      "label": "Wikipedia — Ordinal date (format examples, leap-year rule)",
+      "http_status": 200,
+      "curl_command": "curl -sIL -o /dev/null -w '%{http_code}' https://en.wikipedia.org/wiki/Ordinal_date",
+      "captured_at_utc": "2026-09-28T03:24:00Z"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc3339.txt",
+      "label": "RFC 3339 — Date and Time on the Internet (ISO 8601 profile)",
+      "http_status": 200,
+      "curl_command": "curl -sIL -o /dev/null -w '%{http_code}' https://www.rfc-editor.org/rfc/rfc3339.txt",
+      "captured_at_utc": "2026-09-28T03:24:00Z"
+    },
+    {
+      "url": "https://www.cl.cam.ac.uk/~mgk25/iso-time.html",
+      "label": "Markus Kuhn — ISO 8601 reference (comprehensive format examples)",
+      "http_status": 200,
+      "curl_command": "curl -sIL -o /dev/null -w '%{http_code}' https://www.cl.cam.ac.uk/~mgk25/iso-time.html",
+      "captured_at_utc": "2026-09-28T03:24:00Z"
+    },
+    {
+      "url": "https://www.w3.org/TR/NOTE-datetime",
+      "label": "W3C Note — Date and Time Formats (ISO 8601 profile subset)",
+      "http_status": 200,
+      "curl_command": "curl -sIL -o /dev/null -w '%{http_code}' https://www.w3.org/TR/NOTE-datetime",
+      "captured_at_utc": "2026-09-28T03:24:00Z"
+    }
+  ],
+  "local_repo_check": {
+    "command": "gh repo list prasad-a-abhishek --limit 200 --json name",
+    "found_iso_ordinal_pure": false,
+    "scanned_count": 139
+  },
+  "non_goals_locked": [
+    "no YYYY-MM-DD calendar-date parser",
+    "no YYYY-Www-D week-date parser (covered by iso-weekdate-pure)",
+    "no datetime.strptime wrapper",
+    "no isodate / pendulum / arrow dependency",
+    "no LLM-powered features",
+    "no PyPI release at v0.1.0 (git+https install)",
+    "no timezone handling"
+  ],
+  "scope_budget": {
+    "implementation_loc_max": 400,
+    "dependencies": []
+  },
+  "accepts_locked": 12
+}
